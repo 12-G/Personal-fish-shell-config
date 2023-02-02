@@ -30,4 +30,3 @@ set TERM_EMULATOR (ps -aux | grep (ps -p $fish_pid -o ppid=) | awk 'NR==1{print 
 
 # Nitch
 nitch
-
