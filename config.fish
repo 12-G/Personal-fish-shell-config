@@ -27,12 +27,3 @@ end
 
 # Get terminal emulator
 set TERM_EMULATOR (ps -aux | grep (ps -p $fish_pid -o ppid=) | awk 'NR==1{print $11}')
-
-# FZF
-set -gx FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --no-ignore'
-set -gx FZF_DEFAULT_OPTS "
---height=60% --layout=reverse --border --info=inline --margin=1 --padding=1 
---color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796
-"
