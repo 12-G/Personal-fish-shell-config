@@ -27,3 +27,7 @@ end
 
 # Get terminal emulator
 set TERM_EMULATOR (ps -aux | grep (ps -p $fish_pid -o ppid=) | awk 'NR==1{print $11}')
+
+# Keybindings
+set -g fish_key_bindings fish_vi_key_bindings
+bind -M insert \cr history-pager
